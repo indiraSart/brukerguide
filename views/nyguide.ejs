@@ -1,0 +1,71 @@
+<%- include("./partials/head")%>
+
+<body>
+  <%- include("./partials/nav")%>
+
+  <h1>Ny guide</h1>
+
+    <form action="" method="post" id="addnewselection" enctype="multipart/form-data">
+
+      <div class="section">
+        <div> 
+          <label for="tittel">Tittel</label>
+          <input type="tittel" name="tittel" id="tittel">
+        </div>
+
+
+      <div>
+        <label for="type">type</label>
+        <input type="tag" name="tag" id="tag">
+      </div>
+    
+      <div id="addnewsection">
+        <h2>Seksjon</h2>
+
+        <div>
+          <label for="overskrift">Overskrift</label>
+          <input type="overskrift" name="overskrift" id="overskrift">
+        </div>
+
+        <div>
+          <p>Beskrivelse</p>
+          <input type="beskrivelse" name="beskrivelse" id="beskrivelse">
+        </div>
+
+        <input type="file" name="bilde" id="bilde">
+
+      <button onclick="lagnyseksjon()">Lag ny Seksjon</button>
+      <!-- <p>Bilde</p> -->
+
+      </div>
+      </div>
+      <button>Send inn</button>
+  </form>
+
+  <script>
+
+    function lagnyseksjon() {
+      console.log("ny seksjon")
+    
+
+    let newsection = document.getElementById("addnewsection");
+    let newsection2 = document.querySelector
+    newsection.innerHTML +=`<div>
+          <label for="overskrift">Overskrift</label>
+          <input type="overskrift" name="overskrift" id="overskrift">
+        </div>
+
+        <div>
+          <p>Beskrivelse</p>
+          <input type="beskrivelse" name="beskrivelse" id="beskrivelse">
+        </div>
+
+        <input type="file" name="bilde" id="bilde">`
+
+    }
+    
+
+  </script>
+
+
+</body>
