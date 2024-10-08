@@ -6,6 +6,7 @@
 
 body {
     margin: 0;
+    
 }
 
 nav,ul,li,main,.guidecontainers {
@@ -70,8 +71,55 @@ input[type="text"], input[type="password"] {
     display: flex;
     width: 100%;
     justify-content: center;
+    margin-top: 20px;
     
 
+}
+
+
+.formcontainer h1 {
+
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.formcontainer label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+}
+
+.formcontainer input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+
+}
+.formcontainer input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.formcontainer button {
+    width: 100%;
+    padding: 12px;
+    background-color: #c8b6ff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formcontainer button:hover {
+    background-color: var(--secondary-color);
 }
 
 input {
@@ -87,6 +135,8 @@ input {
     width: 400px;
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
+
 }
 
 

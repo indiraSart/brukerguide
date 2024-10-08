@@ -7,7 +7,6 @@ require("dotenv").config();
 const mongoose =  require("mongoose");
 const Schema = mongoose.Schema;
 const bcrypt = require("bcrypt")
-
 const multer = require("multer");
 const uploads = multer({dest: "uploads/"})
 
@@ -44,20 +43,24 @@ app.post("/login", (req, res) => {
    console.log("LOGGER UT HER", req.body);
    const { email, password } = req.body;
 
-   User.find({email: email}).then((user) => {
-    console.log(user, "USER");
-    if(user) {
-        bcrypt.compare(password, user.password).then((result) => {
-            console.log(result);
+   if(email) {
+
+       
+       User.findOne({email: email}).then((user) => {
+           console.log(user, "USER");
+           if(user) {
+               bcrypt.compare(password, user.password).then((result) => {
+                   console.log(result);
+                   if(result) {
+                    res.status(200).redirect("/dashboard")
+                   }
+                })
+                
+            }
+            
         })
-
+        
     }
-
-    
-   })
-
-
-   
 })
 
 
