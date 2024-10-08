@@ -60,9 +60,35 @@ li {
     margin-top: 40px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="password"] {
     width: 300px;
 }
+
+.flexwrapper {
+
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    
+
+}
+
+input {
+    display: flex;
+}
+
+
+.formcontainer {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .gridcontainer {
     display: grid;
